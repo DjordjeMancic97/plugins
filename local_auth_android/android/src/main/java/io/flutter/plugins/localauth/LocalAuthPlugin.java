@@ -189,7 +189,7 @@ public class LocalAuthPlugin implements MethodCallHandler, FlutterPlugin, Activi
            String title = call.argument("signInTitle");
       String reason = call.argument("localizedReason");
       Intent authIntent = keyguardManager.createConfirmDeviceCredentialIntent(title, reason);
-
+      System.out.println("this method is triggered");
       // save result for async response
       lockRequestResult = result;
       activity.startActivityForResult(authIntent, LOCK_REQUEST_CODE);
